@@ -47,8 +47,8 @@ button#new {
 }
 
 .center section#container {
-  -webkit-animation: fadeIn 1s linear;
-          animation: fadeIn 1s linear;
+  -webkit-animation: fadeIn 1.5s linear;
+          animation: fadeIn 1.5s linear;
   border: 2px solid #333;
   border-radius: .25em;
   display: -webkit-box;

@@ -1,12 +1,14 @@
 const url = 'https://thesimpsonsquoteapi.glitch.me/quotes';
 const container = document.querySelector('#container');
 
+// Quote Class to make new quotes
 const Quote = function (aQuoteText, aCharacter, anImg) {
    this.quoteText = aQuoteText;
    this.character = aCharacter;
    this.img = anImg;
 }
 
+// The structure needed to contain the quote and image
 const newQuoteStructure = (text, char, img) => {
    const textEle = document.createElement('h1');
    const charEle = document.createElement('img');
@@ -25,7 +27,8 @@ const newQuoteStructure = (text, char, img) => {
    container.appendChild(quoteCont);
 }
 
-
+// Fetch the url, return as object
+// Create a new quote with the text from api
 fetch(url)
    .then(resp => resp.json())
    .then(data => {
