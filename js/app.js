@@ -34,4 +34,8 @@ fetch(url)
    .then(data => {
       const quote = new Quote(data[0].quote, data[0].character, data[0].image);
       newQuoteStructure(`"${quote.quoteText}"`, `- ${quote.character}`, quote.img);
+   }).catch(error => {
+      const errorEle = document.createElement('h1');
+      errorEle.textContent = `Oopsies, there was an error`;
+      document.body.appendChild(errorEle);
    });
