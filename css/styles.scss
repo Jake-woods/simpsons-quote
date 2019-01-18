@@ -1,0 +1,100 @@
+@mixin circle($i) {
+   border-radius: 50%;
+   display: block;
+   height: $i;
+   width: $i;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   background: #f7f7f7;
+   font-family: 'Raleway';
+   min-height: 100%;
+}
+
+button#new {
+   background: none;
+   border: 2px solid #333;
+   color: #333;
+   cursor: pointer;
+   font-size: 1.25rem;
+
+   position: absolute;
+   bottom: 1em;
+   left: 1em;
+
+   @include circle(2em);
+}
+
+.center {
+   align-items: center;
+   display: flex;
+   flex-flow: column nowrap;
+
+
+   header {
+      margin-top: 3em;
+
+      img#logo {
+         display: block;
+         max-width: 100%;
+         width: 20em;
+      }
+   }
+
+   section#container {
+      animation: fadeIn 1s linear;
+      border: 2px solid #333;
+      border-radius: .25em;
+      display: flex;
+      margin-top: 3em;
+      max-width: 100%;
+      width: 40em;
+
+      img {
+         flex-basis: 20%;
+         margin: 1em;
+      }
+
+      #quote-container {
+         align-items: center;
+         border-left: 2px solid #333;
+         display: flex;
+         flex-basis: 80%;
+         flex-flow: column;
+         justify-content: center;
+         padding: 1em;
+         text-align: center;
+
+         h1,
+         h2 {
+            color: #333;
+            margin: .5em;
+         }
+
+         h1 {
+            font-weight: 300;
+         }
+
+         h2 {
+            color: #333;
+            font-weight: 400;
+         }
+      }
+   }
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: translateY(2em)
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}

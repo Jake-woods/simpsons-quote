@@ -1,0 +1,129 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: #f7f7f7;
+  font-family: 'Raleway';
+  min-height: 100%;
+}
+
+button#new {
+  background: none;
+  border: 2px solid #333;
+  color: #333;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  border-radius: 50%;
+  display: block;
+  height: 2em;
+  width: 2em;
+}
+
+.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.center header {
+  margin-top: 3em;
+}
+
+.center header img#logo {
+  display: block;
+  max-width: 100%;
+  width: 20em;
+}
+
+.center section#container {
+  -webkit-animation: fadeIn 1s linear;
+          animation: fadeIn 1s linear;
+  border: 2px solid #333;
+  border-radius: .25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3em;
+  max-width: 100%;
+  width: 40em;
+}
+
+.center section#container img {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin: 1em;
+}
+
+.center section#container #quote-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 2px solid #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  text-align: center;
+}
+
+.center section#container #quote-container h1,
+.center section#container #quote-container h2 {
+  color: #333;
+  margin: .5em;
+}
+
+.center section#container #quote-container h1 {
+  font-weight: 300;
+}
+
+.center section#container #quote-container h2 {
+  color: #333;
+  font-weight: 400;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(2em);
+            transform: translateY(2em);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(2em);
+            transform: translateY(2em);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
